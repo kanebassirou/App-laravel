@@ -10,7 +10,7 @@
         <h1> hello from Diourbel !</h1>
         <p>l'heure actuel est {{date('H:i A')}}. </p>
         <footer>
-            <p>&copy; {{date('Y')}} &middot; <a href="#">About Us</a></p>
+            <p>&copy; {{date('Y')}} &middot; <a href="/abouts-us">About Us</a></p>
         </footer>
     </body>
 </html>

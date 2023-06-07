@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('acceuil');
+    return view('pages.acceuil');
+});
+Route::get('/abouts-us',function(){
+    return view('pages.about');
+
 });
