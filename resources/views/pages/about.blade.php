@@ -3,9 +3,11 @@
 
 
 @section('content')
-<img src="/images/teacherNET.png" alt="teacher du net">
+<img src="{{asset('/images/teacherNET.png')}}" alt="teacher du net"
+class="my-12 rounded-full">
 
-        <p>maison avec &hearts; avec les professeurs du Net.</p>
-        <p><a href="/">Revenir à la page d'acceuil</a></p>
+        <h2 class="mb-5 text-gray-700">maison avec
+                 <span class='text-pink-500'> &hearts;</span>avec les professeurs du Net.</h2>
+        <p class=""><a href="/">Revenir à la page d'acceuil</a></p>
         
    @endsection
