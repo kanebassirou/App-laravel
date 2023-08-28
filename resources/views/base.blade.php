@@ -15,7 +15,7 @@
         
     
         <footer>
-            <pclass ="text-gray-400">
+            <p class ="text-gray-400">
                 &copy;copyright:bk {{date('Y')}}
                 @if(! Route ::is('about'))
                  &middot; 
