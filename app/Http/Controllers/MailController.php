@@ -14,7 +14,7 @@ class MailController extends Controller
             'title'=> 'Mail from bassirou',
             'body' => 'tester envoie de mail ',
         ];
-        Mail::to('kaneb@gmail.com')->send(new emails($emailData));
+        Mail::to('bassirou.kane@univ-thies.sn')->send(new emails($emailData));
         dd('mail envoi avec succe');
     }
 }

@@ -30,7 +30,7 @@ class emails extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Emails',
+            subject: $this->emailData['title'],
         );
     }
 
@@ -40,7 +40,8 @@ class emails extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact',
+            view: 'emails.contacts',
+            with: $this->emailData
         );
     }
 
@@ -52,9 +53,9 @@ class emails extends Mailable
     public function attachments(): array
     {
         return [
-            Attachment::fromPath('C:\xampp\htdocs\premierProjetLaraval\public\images\drapeauSenegal.png') // Assurez-vous de spécifier le bon chemin ici
-                ->as('drapeauSenegal.png') // Nom de la pièce jointe
-                ->withMime('image/png'), // Type MIME correct pour une image PNG
+          Attachment::fromData(fn()=> $this ->emailData['pdf']->output(),'Report.pdf')
+                   ->withMime('application/pdf')
+            ,   
         ];
     }
 }

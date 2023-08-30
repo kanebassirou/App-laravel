@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,3 +42,4 @@ Route::get('/envoieMail', [ContactController::class,'create']
     
 );
 Route::get('Send-email',[MailController::class,'contact']);
+Route::get('Send-pdfemail',[PdfController::class,'index']);
